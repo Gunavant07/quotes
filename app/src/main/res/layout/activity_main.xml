@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#D72E2B2B"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#3E5151">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="15dp">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="#84A6A6" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card1"
+            android:layout_marginTop="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rcy"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtNotfound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item Not Found"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
